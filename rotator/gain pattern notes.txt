@@ -1,0 +1,24 @@
+1. Directivity pattern is drawn by taking the max as 0
+
+2. Estimate directivity from pattern:
+Total radiated power is integrated. Omnis should have around 0, 
+patch/small directional antenna 5-8 dB, Yagi or horn 10-20 dB.
+
+The above estimation is down with 2D plane and not 3D integration. Over estimate is likely
+if we assume 3D symmetry and ends up not being true. 3D antennas with strong elevation lobes
+(yagi, horn) the estimate might not be the best.
+
+3. With S11 and assuming 100% radiation efficiency, we can estimate the gain as well.
+
+Radiation efficiency can be given from the vendor or simulated, or meaured.
+Typical values:
+Small PCB patch/chip antenna 0.2-0.6
+quarter monopole or dipole 0.7-0.9
+Well designed patch 0.7-0.96
+Yagi/log-periodic 0.9+
+
+
+4. Measuring S11, 
+open will have smith chart on the right, reflection 0 dB.
+matched load smith will be in center and reflection all the way down
+short circuit will have smith chart on the left, reflection 0 dB.
