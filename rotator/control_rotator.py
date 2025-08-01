@@ -19,14 +19,12 @@ def main():
     position = 0  # Accumulated position
 
     try:
-        with serial.Serial(port, 9600, timeout=1) as ser:
+        with serial.Serial(port, 115200, timeout=1) as ser:
             while True:
-                user_input = input("Enter +6 or -6: ").strip()
-
-                if user_input not in ["6", "-6"]:
-                    print("Only +6 or -6 are allowed.")
-                    continue
-
+                user_input = input("Enter +x or -x: ").strip()
+                #if user_input not in ["6", "-6"]:
+                #    print("Only +6 or -6 are allowed.")
+                #    continue
                 value = int(user_input)
                 position += value  # Update accumulated position
 
